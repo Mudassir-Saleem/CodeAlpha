@@ -1,0 +1,93 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+import './index.css'
+
+
+import Navitems from './components/Navitems.jsx'
+import Home from './home/Home.jsx'
+import Shop from './shop/Shop.jsx'
+import Blog from './blog/Blog.jsx'
+import About from './About/About.jsx'
+import Contact from './Contact/Contact.jsx'
+
+
+
+
+//import 'swiper/css'
+
+// bootstrap css
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+
+
+// fonts and icons
+import '././assets/css/icofont.min.css';
+import '././assets/css/animate.css';
+import '././assets/css/style.min.css';
+
+
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App/>,
+
+    children:
+    [
+      {
+        path:"/",
+        element:<Home/>
+      },
+      
+        {
+          path:"/Navitems",
+          element:<Navitems/>
+      },
+      {
+       
+        path:"/shop",
+        element:<Shop/>
+
+
+      }
+      ,{
+       
+        path:"/blog",
+        element:<Blog/>
+
+
+      }
+      ,
+      {
+        path:"/About",
+        element:<About/>
+      }
+
+      ,
+      {
+path:"/Contact",
+        element:<Contact/>
+
+      }
+    ]
+  },
+]);
+
+
+
+
+
+
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <RouterProvider router={router} />
+)
