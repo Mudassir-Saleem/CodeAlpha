@@ -19,7 +19,7 @@ const Contact = () => {
   return (
     <div>
       
-    <PageHeader  title="Our Contact  Page" curpage="Contact"  />
+    <PageHeader  title="OuR Contact  page" curpage="Contact"  />
 
     <section className="register-section padding-tb pb-0">
     <div className="container">
